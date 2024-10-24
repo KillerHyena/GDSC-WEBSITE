@@ -1,0 +1,84 @@
+/* Reset default margins and paddings */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling */
+  background-color: #f2f2f2; /* Light background color */
+}
+
+/* Root container for the React app */
+#root {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main App container */
+.App {
+  width: 100%; /* Full width */
+  height: 100vh; /* Full height */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styling */
+.header {
+  width: 100%;
+  background-color: #232f3e; /* Dark header color similar to Amazon */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.5s ease-in-out; /* Slide down animation */
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in; /* Fade-in for the header text */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.header p {
+  margin: 5px 0 0 0;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* Iframe container should be full-screen minus the header */
+.iframe-container {
+  flex-grow: 1; /* Expand to fill the remaining space */
+  overflow: hidden;
+  position: relative;
+  background-color: #ffffff; /* White background for iframe */
+  animation: fadeIn 0.5s ease-in; /* Fade-in effect for the iframe */
+}
